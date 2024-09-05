@@ -1,0 +1,12 @@
+2024-09-05T00:36:31.444+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/auth/register", parameters={}
+2024-09-05T00:36:31.475+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.pocket.spring.application.controller.AuthController#registerHandler(UserModel)
+2024-09-05T00:36:31.477+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.pocket.spring.application.model.UserModel@14172334]
+2024-09-05T00:36:31.528+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.pocket.spring.application.exception.GlobalExceptionHandler#handleApiException(ApiException)
+2024-09-05T00:36:31.529+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-05T00:36:31.529+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{exception=Email is already registered}]
+2024-09-05T00:36:31.530+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.pocket.spring.application.exception.ApiException: Email is already registered]
+2024-09-05T00:36:31.531+03:00 DEBUG 6204 --- [spring] [http-nio-5681-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 409 CONFLICT
+2024-09-05T08:30:55.159+03:00  WARN 6204 --- [spring] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h48m12s685ms677µs300ns).
+2024-09-05T13:49:45.631+03:00  INFO 6204 --- [spring] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T13:49:45.648+03:00  INFO 6204 --- [spring] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T13:49:45.735+03:00  INFO 6204 --- [spring] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
