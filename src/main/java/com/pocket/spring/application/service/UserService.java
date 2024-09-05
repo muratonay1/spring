@@ -58,7 +58,6 @@ public class UserService implements UserDetailsService {
         Optional<UserModel> existingUser = userRepository.findByEmail(user.getEmail());
 
         if (existingUser.isPresent() && passwordEncoder.matches(user.getPassword(), existingUser.get().getPassword())) {
-            // Update the last login time or any other login-related logic
             existingUser.get().setUpdatedAt(LocalDateTime.now());
             return userRepository.save(existingUser.get());
         } else {
